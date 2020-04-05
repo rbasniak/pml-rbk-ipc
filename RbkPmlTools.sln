@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbkPmlTools.IPC", "RbkPmlTools.IPC\RbkPmlTools.IPC.csproj", "{1E47A201-CF9F-43B6-9A09-432A29FF05FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbkPmlTools.Commands", "RbkPmlTools.IPC.Commands\RbkPmlTools.Commands.csproj", "{3EEA87EF-436B-4D5E-AB47-295E6134A55D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RbkPmlTools.IPC.Core", "RbkPmlTools.IPC.Core\RbkPmlTools.IPC.Core.csproj", "{15242F4D-FD4D-47DF-878C-C766B44D8F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbkPmlTools.IPC.PMLNet", "RbkPmlTools.IPC.PMLNet\RbkPmlTools.IPC.PMLNet.csproj", "{A856E8B6-B23B-439A-8787-4ADF94A67334}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RbkPmlTools.IPC.TestClient", "RbkPmlTools.IPC.TestClient\RbkPmlTools.IPC.TestClient.csproj", "{02B01867-3139-41E2-AE8F-5607CF125893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{532B40B2-0ECC-43A8-B8C8-293002A5804F}"
+	ProjectSection(SolutionItems) = preProject
+		mirror.bat = mirror.bat
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pmllib", "pmllib", "{FD16830B-09D6-47DC-8134-45A5B69B6349}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Trabalho\ITER\Custom\pmllib\RbkPmlIpc\rbkPmlIpcServer.pmlfrm = ..\..\..\Trabalho\ITER\Custom\pmllib\RbkPmlIpc\rbkPmlIpcServer.pmlfrm
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E47A201-CF9F-43B6-9A09-432A29FF05FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E47A201-CF9F-43B6-9A09-432A29FF05FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E47A201-CF9F-43B6-9A09-432A29FF05FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E47A201-CF9F-43B6-9A09-432A29FF05FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEA87EF-436B-4D5E-AB47-295E6134A55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEA87EF-436B-4D5E-AB47-295E6134A55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEA87EF-436B-4D5E-AB47-295E6134A55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEA87EF-436B-4D5E-AB47-295E6134A55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15242F4D-FD4D-47DF-878C-C766B44D8F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15242F4D-FD4D-47DF-878C-C766B44D8F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15242F4D-FD4D-47DF-878C-C766B44D8F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15242F4D-FD4D-47DF-878C-C766B44D8F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A856E8B6-B23B-439A-8787-4ADF94A67334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A856E8B6-B23B-439A-8787-4ADF94A67334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A856E8B6-B23B-439A-8787-4ADF94A67334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A856E8B6-B23B-439A-8787-4ADF94A67334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02B01867-3139-41E2-AE8F-5607CF125893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B01867-3139-41E2-AE8F-5607CF125893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B01867-3139-41E2-AE8F-5607CF125893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B01867-3139-41E2-AE8F-5607CF125893}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67CBE861-6170-4283-BAAA-17DD22C312BA}
+	EndGlobalSection
+EndGlobal

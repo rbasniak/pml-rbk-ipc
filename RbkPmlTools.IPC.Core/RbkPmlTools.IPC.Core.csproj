@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\RbkPmlTools.IPC\Contracts\COPYDATASTRUCT.cs" Link="COPYDATASTRUCT.cs" />
+    <Compile Include="..\RbkPmlTools.IPC\Contracts\DataReceivedEventArgs.cs" Link="DataReceivedEventArgs.cs" />
+    <Compile Include="..\RbkPmlTools.IPC\Contracts\IIpcClient.cs" Link="IIpcClient.cs" />
+    <Compile Include="..\RbkPmlTools.IPC\Contracts\IIpcServer.cs" Link="IIpcServer.cs" />
+    <Compile Include="..\RbkPmlTools.IPC\CopyDataClient.cs" Link="CopyDataClient.cs" />
+    <Compile Include="..\RbkPmlTools.IPC\CopyDataServer.cs" Link="CopyDataServer.cs" />
+  </ItemGroup>
+
+</Project>

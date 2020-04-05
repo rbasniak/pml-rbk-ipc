@@ -1,0 +1,1 @@
+copy D:\Repositories\pessoal\rbk-tools\RbkPmlTools.IPC.PMLNet\bin\Debug\*.* D:\Trabalho\ITER\Custom\pmllib\RbkPmlIpc
