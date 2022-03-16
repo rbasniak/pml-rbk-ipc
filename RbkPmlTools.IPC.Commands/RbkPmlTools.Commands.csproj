@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,30 +34,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aveva.ApplicationFramework">
-      <HintPath>$(AVEVA_DESIGN_EXE)\Aveva.ApplicationFramework.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\Aveva.ApplicationFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aveva.ApplicationFramework.Presentation">
-      <HintPath>$(AVEVA_DESIGN_EXE)\Aveva.ApplicationFramework.Presentation.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\Aveva.ApplicationFramework.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aveva.Core.Database">
-      <HintPath>$(AVEVA_DESIGN_EXE)\Aveva.Core.Database.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\Aveva.Core.Database.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aveva.Core.Presentation">
-      <HintPath>$(AVEVA_DESIGN_EXE)\Aveva.Core.Presentation.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\Aveva.Core.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Aveva.Core.Utilities">
-      <HintPath>$(AVEVA_DESIGN_EXE)\Aveva.Core.Utilities.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\Aveva.Core.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PMLNet">
-      <HintPath>$(AVEVA_DESIGN_EXE)\PMLNet.dll</HintPath>
+      <HintPath>$(AVEVA_DESIGN_DLL)\PMLNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
