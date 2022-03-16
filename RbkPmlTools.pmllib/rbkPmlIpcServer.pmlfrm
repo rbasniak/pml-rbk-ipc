@@ -1,0 +1,19 @@
+ 
+call !!rbkPmlNetImporter('RbkPmlTools.IPC.PMLNet', true)
+
+setup form !!rbkPmlIpcServer resizable
+  title 'rbkPmlIpcServer v1.0.0'
+
+  using namespace 'RbkPmlTools.IPC.PMLNet'
+  container .controlFrame nobox PmlNetControl 'control' anchor all at x0 y0 width 40 height 3
+
+  member .elementHost is RbkIpcServerControl
+exit
+
+define method .rbkPmlIpcServer()
+  using namespace 'RbkPmlTools.IPC.PMLNet'
+
+  !this.elementHost = object RbkIpcServerControl()
+  !this.controlFrame.control = !this.elementHost.handle() 
+endmethod
+
