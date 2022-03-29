@@ -38,44 +38,70 @@ namespace RbkPmlTools.Commands
                         }, Formatting.Indented)
                     };
                 }
-
-
-                //Command.UpdateOn(false);
-                //Command.EventsOn(false);
-
-                var tempFilename = Path.GetTempFileName();
-
-                Command.CreateCommand("ALPHA LOG /" + tempFilename + " OVERWRITE").Run();
-                
-                var command = Command.CreateCommand(input.Command);
-                var result = command.Run();
-
-                Command.CreateCommand("ALPHA LOG END").Run();
-
-                //Thread.Sleep(250);
-
-                //Command.UpdateOn(true);
-                //Command.EventsOn(true);
-
-                //Command.Update();
-
-                if (command.Error.MessageNumber == 0)
+                else if (input.Command.ToUpper() == "Q MDB")
                 {
                     return new CommandResponse
                     {
-                        Result = File.ReadAllText(tempFilename),
                         Command = input,
-                        Error = null
+                        Error = null,
+                        Result = JsonConvert.SerializeObject(new
+                        {
+                            Name = MDB.CurrentMDB.Name,
+                        }, Formatting.Indented)
+                    };
+                }
+                else if (input.Command.ToUpper() == "Q PROJECT")
+                {
+                    return new CommandResponse
+                    {
+                        Command = input,
+                        Error = null,
+                        Result = JsonConvert.SerializeObject(new
+                        {
+                            Name = Project.CurrentProject.Name,
+                        }, Formatting.Indented)
                     };
                 }
                 else
                 {
-                    return new CommandResponse
+
+                    //Command.UpdateOn(false);
+                    //Command.EventsOn(false);
+
+                    var tempFilename = Path.GetTempFileName();
+
+                    Command.CreateCommand("ALPHA LOG /" + tempFilename + " OVERWRITE").Run();
+
+                    var command = Command.CreateCommand(input.Command);
+                    var result = command.Run();
+
+                    Command.CreateCommand("ALPHA LOG END").Run();
+
+                    //Thread.Sleep(250);
+
+                    //Command.UpdateOn(true);
+                    //Command.EventsOn(true);
+
+                    //Command.Update();
+
+                    if (command.Error.MessageNumber == 0)
                     {
-                        Command = input,
-                        Result = null,
-                        Error = command.Error,
-                    };
+                        return new CommandResponse
+                        {
+                            Result = File.ReadAllText(tempFilename),
+                            Command = input,
+                            Error = null
+                        };
+                    }
+                    else
+                    {
+                        return new CommandResponse
+                        {
+                            Command = input,
+                            Result = null,
+                            Error = command.Error,
+                        };
+                    }
                 }
             }
             catch (Exception ex)

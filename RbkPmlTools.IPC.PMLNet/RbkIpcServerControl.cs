@@ -10,6 +10,7 @@ using Aveva.Core.PMLNet;
 using Newtonsoft.Json;
 using RbkPmlTools.IPC;
 using RbkPmlTools.Commands;
+using System.Windows.Threading;
 
 namespace RbkPmlTools.IPC.PMLNet
 {
@@ -18,12 +19,14 @@ namespace RbkPmlTools.IPC.PMLNet
     {
         private readonly IIpcServer _receiver;
         private readonly IIpcClient _transmitter;
+        private readonly Dispatcher _avevaDispatcher;
 
         [PMLNetCallable]
         public RbkIpcServerControl()
         {
             InitializeComponent();
 
+            _avevaDispatcher = Dispatcher.CurrentDispatcher;
             _receiver = new CopyDataServer("SERVER_RECEIVER");
             _receiver.Received += Server_Received;
 
@@ -34,9 +37,12 @@ namespace RbkPmlTools.IPC.PMLNet
         {
             var cli = new CommandLineWrapper();
 
-            var response = cli.Execute(new CommandLineWrapper.CommandInput(e.Data));
+            _avevaDispatcher.BeginInvoke(new Action(() => 
+            {
+                var response = cli.Execute(new CommandLineWrapper.CommandInput(e.Data));
 
-            _transmitter.Send(JsonConvert.SerializeObject(response, Formatting.Indented), "CLIENT_RECEIVER");
+                _transmitter.Send(JsonConvert.SerializeObject(response, Formatting.Indented), "CLIENT_RECEIVER");
+            }));
         }
 
         [PMLNetCallable]
