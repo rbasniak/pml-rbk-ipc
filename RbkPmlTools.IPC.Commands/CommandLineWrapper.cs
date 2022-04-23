@@ -86,9 +86,11 @@ namespace RbkPmlTools.Commands
 
                     if (command.Error.MessageNumber == 0)
                     {
+                        var response = File.ReadAllText(tempFilename);
+
                         return new CommandResponse
                         {
-                            Result = File.ReadAllText(tempFilename),
+                            Result = String.IsNullOrEmpty(response) ? null : response,
                             Command = input,
                             Error = null
                         };
